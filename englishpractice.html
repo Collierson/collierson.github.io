@@ -7,6 +7,7 @@
 <body>
     <h1>null</h1>
     <h2>空</h2>
+    <h3>題目</h3>
     <input type="text">
     <button>點擊</button>
     <style>
@@ -46,11 +47,25 @@
             z-index: -1;
             letter-spacing: 6px;
         }
+        h3 {
+            position: fixed;
+            text-align: center;
+            width: 100%;
+            top: 500px;
+            font-size: 90px;
+            background: -webkit-linear-gradient(0deg, #9a51ff 0%, #3a6efa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Concert One', cursive;
+            font-weight: 400;
+            z-index: -1;
+            letter-spacing: 6px;
+        }
         button {
             position: fixed;
             width:50px;
             height: 40px;
-            top:450px;
+            top:520px;
             left: 60%;
             right: 40%;
             margin-left:-25px;
@@ -61,7 +76,7 @@
             position: fixed;
             width:100px;
             height: 40px;
-            top: 450px;
+            top: 520px;
             left: 50%;
             right: 50%;
             margin-left:-50px;
@@ -72,9 +87,14 @@
         var myButton = document.querySelector('button');
         var myHeading = document.querySelector('h1');
         var Chinese = document.querySelector('h2');
+        var topic = document.querySelector('h3');
+        var myArray = ['n. 食品雜貨;食品雜貨店','adj. 奇怪的;古怪的','adj. 困難的;艱苦的  反義:easy','n. 意見;忠告','v. 建議;勸告','v. 分發','n. 解決方法','v. 解決','n. 名人','v. 支持','n. 活動','v. 避免;防止','v. 教導','n. 教育','v. 投資','n. 投資','n. 議題','v. 幫忙','n. 助理;助手','adv. 最後;終於','adj. 最終的','v. 珍惜 n.寶藏;珍寶','一點也不...','丟掉','打開(開關)  反義:turn off;switch off','利用;使用','需要(幫助或物資)','畢竟','n. 失敗  反義:success','adj. 有趣的;好玩的','v. 逗樂;逗笑','v. 收集;聚集','n. 組織;機構','v. 組織;籌備','n. 研究;調查','v. 堅持','n. 展覽;陳列','v. 展示','n. 目標','adv. 特別;尤其','adj. 特別的;特定的','adj. 冷凍的','v. 結冰;凝固  反義:melt','n. 混合(物)','n. 味道','n. 一段時間;時期','v. 象徵;表示','adj. 願意的','n. 意願;意志','v. 擁抱;欣然接受','n. 道路;小徑','有...共通點','起初;原先','厭倦','由於;因為','過時;落伍','破產;停業','v. 呼吸','n. 一口氣','v. 吞','adj. 疼痛的;痛苦的  反義:painless','n. 疼痛;痛苦','adj. 惱人的','v. 惱人;使生氣','n. 災難;災害','v. 活下來;從...中生還','n. 存活;生還','v. 汙染','n. 汙染','n. 自然環境;環境;周遭','v. 漂浮  反義:sink','n. 生物','n. 事件','v. 減少;降低  反義:increase','n. 減少;降低','adj. 急迫的;緊急的','v. 催促;力勸','n. 努力;盡力','n. 危機(複數crises)','adv. 同時','v. 禁止','adv. 目前;現在','v. 想知道','意外地;偶然地  反義:on purpose','吐;嘔吐','分解','減少'];
         const inputdate = document.querySelector('input[type="text"]');
 
         myButton.onclick = function() {
+            var rand = Math.floor(Math.random()*myArray.length);
+            var rValue = myArray[rand];
+            topic.innerHTML = rValue;
             setUserName();
             setChinese();
         }
@@ -355,8 +375,5 @@
             }
 
         }
-
-
-
     </script>
 </body>
