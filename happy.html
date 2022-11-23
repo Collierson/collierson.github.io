@@ -64,8 +64,10 @@
 <div class="before"></div>
 <div class="after"></div>
 </div>
+<input type="text" style="z-index:100;position: relative;">
+<button onclick="printInputValue()" style="width: 50px;height: 25px;z-index:100;position: relative;">點擊</button>
 <h1>智障</h1>
-<h2>張珊珊生日快樂</h2>
+<h2>生日快樂</h2>
 <span>🎉</span>
 <div class="candle">
 <div id="flame" class="lit"></div>
@@ -74,11 +76,22 @@
 <div class="plate"></div>
 <div class="newtime" id="current_date"></p></div>
 <script>
+    var myButton = document.querySelector('button');
+    var myHeading = document.querySelector('h2');
+    const inputdate = document.querySelector('input[type="text"]');
     date = new Date();
     year = date.getFullYear();
     month = date.getMonth() + 1;
     day = date.getDate();
-    document.getElementById("current_date").innerHTML = year + "/" + month + "/" + day + "。17歲快樂~";
+    document.getElementById("current_date").innerHTML = year + "/" + month + "/" + day;
+    myButton.onclick = function() {
+        setUserName();
+    }
+    function setUserName() {
+        let myName = inputdate.value;
+        localStorage.setItem('name', myName);
+        myHeading.innerHTML = myName + '生日快樂';
+    }
 </script>
 
 <style>
@@ -145,16 +158,6 @@ h1, h2, span {
     background: -webkit-linear-gradient(90deg, #e9e6ff 0%, white 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-  }
-
-  .newtime{
-    position: fixed;
-    text-align: center;
-    width: 100%;
-    top: 600px;
-    font-size: 70px;
-    color: rgb(242, 146, 255);
-    z-index: 5;
   }
 
   bokeh {
@@ -836,6 +839,15 @@ h1, h2, span {
     box-shadow: 0 0 17px 7px rgba(251, 246, 190, 0.71);
     transform-origin: bottom;
     animation: flicker 1s ease-in-out alternate infinite;
+  }
+
+  .newtime{
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    top: 500px;
+    font-size: 70px;
+    color: rgb(242, 146, 255);
   }
 
   @keyframes flicker {
