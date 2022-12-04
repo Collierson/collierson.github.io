@@ -1,0 +1,96 @@
+body {
+    font-family: Roboto;
+    background-color: #93a5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login {
+    background-color: rgb(89, 89, 252);
+    width: 400px;
+    position: fixed;
+    top:25%;
+    color: #ffffff;
+    padding: 40px;
+    box-shadow: 10px 10px 25px #00000080;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.login input {
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    background: none;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 22px;
+    outline: none;
+    color: #ffffff;
+}
+
+.login input[type="username"], .login input[type="password"] {
+    border: 2px solid #132ec7;
+    width: 220px;
+    transition: 0.5s;
+}
+
+.login input[type="submit"] {
+    border: 2px solid #c78e13;
+    width: 150px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.login input[type="username"]:focus, .login input[type="password"]:focus {
+    width: 280px;
+    transition: 0.5s;
+}
+
+.login input[type="submit"]:hover {
+    background-color: #c78e13;
+    transition: 0.5s;
+}
+
+.login span {
+    display: block;
+    color: #ff0000;
+    visibility: hidden;
+}
+.homebutton{
+    font-family:Roboto;
+    position: fixed;
+    display: block;
+    left: 30px;
+    top: 18px;
+    font-size: 35px;
+    background-color: rgb(89, 89, 252);
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+}
+.loginbutton{
+    position: fixed;
+    background-color: #4643f0;
+    border: 3.3px solid #002fff;
+    padding: 10px 25px;
+    color:white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 22px;
+    right: 10px;
+    top: 18px;
+}
+
+.information_bar{
+    background-color: rgb(89, 89, 252);
+    position: fixed;
+    width: 100%;
+    padding:40px;
+    top:0;
+}
