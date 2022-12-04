@@ -6,7 +6,7 @@
 <style>
 body {
     font-family: Roboto;
-    background-color: #142885;
+    background-color: rgb(89, 89, 252);
     display: flex;
     height: 100vh;
     align-items: center;
