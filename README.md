@@ -27,7 +27,8 @@ button{
 }
 </style>
 <script>
-button.onclick = function(){
+var homebutton = document.querySelector('button');
+homebutton.onclick = function(){
     window.location = './login/home.html'
 }
 </script>
