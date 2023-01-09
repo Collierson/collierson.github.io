@@ -34,11 +34,25 @@ h2 {
     z-index: -1;
     letter-spacing: 6px;
 }
+h3 {
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    top: 500px;
+    font-size: 90px;
+    background: -webkit-linear-gradient(0deg, #9a51ff 0%, #3a6efa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Concert One', cursive;
+    font-weight: 400;
+    z-index: -1;
+    letter-spacing: 6px;
+}
 button {
     position: fixed;
     width:50px;
     height: 40px;
-    top:450px;
+    top:520px;
     left: 60%;
     right: 40%;
     margin-left:-25px;
@@ -49,7 +63,7 @@ input {
     position: fixed;
     width:100px;
     height: 40px;
-    top: 450px;
+    top: 520px;
     left: 50%;
     right: 50%;
     margin-left:-50px;
