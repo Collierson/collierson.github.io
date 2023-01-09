@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>English practice</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>null</h1>
+    <h2>空</h2>
+    <h3>題目</h3>
+    <input type="text">
+    <button>點擊</button>
+    <style>
+        body {
+            background: linear-gradient(to right, #e2b8f7, #d4bafa, #c7bcfb, #b9befb, #acbff9);
+            cursor: crosshair;
+            perspective: 1000px;
+            transform-style: preserve-3d;
+            font-family: "Pacifico",cursive;
+        }
+
+        h1 {
+            position: fixed;
+            text-align: center;
+            width: 100%;
+            top: 120px;
+            font-size: 90px;
+            background: -webkit-linear-gradient(0deg, #9a51ff 0%, #3a6efa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Concert One', cursive;
+            font-weight: 400;
+            z-index: -1;
+            letter-spacing: 6px;
+        }
+        h2 {
+            position: fixed;
+            text-align: center;
+            width: 100%;
+            top: 200px;
+            font-size: 90px;
+            background: -webkit-linear-gradient(0deg, #9a51ff 0%, #3a6efa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Concert One', cursive;
+            font-weight: 400;
+            z-index: -1;
+            letter-spacing: 6px;
+        }
+        h3 {
+            position: fixed;
+            text-align: center;
+            width: 100%;
+            top: 500px;
+            font-size: 90px;
+            background: -webkit-linear-gradient(0deg, #9a51ff 0%, #3a6efa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-family: 'Concert One', cursive;
+            font-weight: 400;
+            z-index: -1;
+            letter-spacing: 6px;
+        }
+        button {
+            position: fixed;
+            width:50px;
+            height: 40px;
+            top:520px;
+            left: 60%;
+            right: 40%;
+            margin-left:-25px;
+            margin-top:-20px;
+        }
+
+        input {
+            position: fixed;
+            width:100px;
+            height: 40px;
+            top: 520px;
+            left: 50%;
+            right: 50%;
+            margin-left:-50px;
+            margin-top:-20px;
+        }
+    </style>
+    <script>
+        var myButton = document.querySelector('button');
+        var myHeading = document.querySelector('h1');
+        var Chinese = document.querySelector('h2');
+        var topic = document.querySelector('h3');
+        var myArray = ['n. 食品雜貨;食品雜貨店','adj. 奇怪的;古怪的','adj. 困難的;艱苦的  反義:easy','n. 意見;忠告','v. 建議;勸告','v. 分發','n. 解決方法','v. 解決','n. 名人','v. 支持','n. 活動','v. 避免;防止','v. 教導','n. 教育','v. 投資','n. 投資','n. 議題','v. 幫忙','n. 助理;助手','adv. 最後;終於','adj. 最終的','v. 珍惜 n.寶藏;珍寶','一點也不...','丟掉','打開(開關)  反義:turn off;switch off','利用;使用','需要(幫助或物資)','畢竟','n. 失敗  反義:success','adj. 有趣的;好玩的','v. 逗樂;逗笑','v. 收集;聚集','n. 組織;機構','v. 組織;籌備','n. 研究;調查','v. 堅持','n. 展覽;陳列','v. 展示','n. 目標','adv. 特別;尤其','adj. 特別的;特定的','adj. 冷凍的','v. 結冰;凝固  反義:melt','n. 混合(物)','n. 味道','n. 一段時間;時期','v. 象徵;表示','adj. 願意的','n. 意願;意志','v. 擁抱;欣然接受','n. 道路;小徑','有...共通點','起初;原先','厭倦','由於;因為','過時;落伍','破產;停業','v. 呼吸','n. 一口氣','v. 吞','adj. 疼痛的;痛苦的  反義:painless','n. 疼痛;痛苦','adj. 惱人的','v. 惱人;使生氣','n. 災難;災害','v. 活下來;從...中生還','n. 存活;生還','v. 汙染','n. 汙染','n. 自然環境;環境;周遭','v. 漂浮  反義:sink','n. 生物','n. 事件','v. 減少;降低  反義:increase','n. 減少;降低','adj. 急迫的;緊急的','v. 催促;力勸','n. 努力;盡力','n. 危機(複數crises)','adv. 同時','v. 禁止','adv. 目前;現在','v. 想知道','意外地;偶然地  反義:on purpose','吐;嘔吐','分解','減少'];
+        const inputdate = document.querySelector('input[type="text"]');
+
+        myButton.onclick = function() {
+            var rand = Math.floor(Math.random()*myArray.length);
+            var rValue = myArray[rand];
+            topic.innerHTML = rValue;
+            setUserName();
+            setChinese();
+        }
+
+        function setUserName() {
+            let myName = inputdate.value;
+            localStorage.setItem('name', myName);
+            myHeading.innerHTML = myName;
+        }
+
+        function setChinese() {
+            //第二課單片
+            if(inputdate.value === 'grocery'){
+                Chinese.innerHTML = 'n. 食品雜貨;食品雜貨店';
+            }
+            else if(inputdate.value === 'weird' || inputdate.value === 'strange' || inputdate.value === 'odd'){
+                Chinese.innerHTML = 'adj. 奇怪的;古怪的';
+            }
+            else if(inputdate.value === 'tough' || inputdate.value === 'difficult'){
+                Chinese.innerHTML = 'adj. 困難的;艱苦的  反義:easy';
+            }
+            else if(inputdate.value === 'advice'){
+                Chinese.innerHTML = 'n. 意見;忠告';
+            }
+            else if(inputdate.value === 'advise'){
+                Chinese.innerHTML = 'v. 建議;勸告';
+            }
+            else if(inputdate.value === 'distribute' || inputdate.value === 'give out'){
+                Chinese.innerHTML = 'v. 分發';
+            }
+            else if(inputdate.value === 'solution' || inputdate.value === 'answer'){
+                Chinese.innerHTML = 'n. 解決方法';
+            }
+            else if(inputdate.value === 'solve' || inputdate.value === 'resolve'){
+                Chinese.innerHTML = 'v. 解決';
+            }
+            else if(inputdate.value === 'celebrity' || inputdate.value === 'star'){
+                Chinese.innerHTML = 'n. 名人';
+            }
+            else if(inputdate.value === 'support'){
+                Chinese.innerHTML = 'v. 支持';
+            }
+            else if(inputdate.value === 'activity'){
+                Chinese.innerHTML = 'n. 活動';
+            }
+            else if(inputdate.value === 'prevent'){
+                Chinese.innerHTML = 'v. 避免;防止';
+            }
+        //odd=strange=weird
+            else if(inputdate.value === 'educate'){
+                Chinese.innerHTML = 'v. 教導';
+            }
+            else if(inputdate.value === 'education'){
+                Chinese.innerHTML = 'n. 教育';
+            }
+            else if(inputdate.value === 'invest'){
+                Chinese.innerHTML = 'v. 投資';
+            }
+            else if(inputdate.value === 'investment'){
+                Chinese.innerHTML = 'n. 投資';
+            }
+            else if(inputdate.value === 'issue'){
+                Chinese.innerHTML = 'n. 議題';
+            }
+            else if(inputdate.value === 'assist'){
+                Chinese.innerHTML = 'v. 幫忙';
+            }
+            else if(inputdate.value === 'assistant'){
+                Chinese.innerHTML = 'n. 助理;助手';
+            }
+            else if(inputdate.value === 'eventually' || inputdate.value === 'finally'){
+                Chinese.innerHTML = 'adv. 最後;終於';
+            }
+            else if(inputdate.value === 'eventual'){
+                Chinese.innerHTML = 'adj. 最終的';
+            }
+            else if(inputdate.value === 'treasure'){
+                Chinese.innerHTML = 'v. 珍惜 n.寶藏;珍寶';
+            }
+            else if(inputdate.value === 'not...at all'){
+                Chinese.innerHTML = '一點也不...';
+            }
+            else if(inputdate.value === 'throw away' || inputdate.value === 'throw out'){
+                Chinese.innerHTML = '丟掉';
+            }
+            else if(inputdate.value === 'turn on' || inputdate.value === 'put on' || inputdate.value === 'switch on'){
+                Chinese.innerHTML = '打開(開關)  反義:turn off;switch off';
+            }
+            else if(inputdate.value === 'make use of'){
+                Chinese.innerHTML = '利用;使用';
+            }
+            else if(inputdate.value === 'in need'){
+                Chinese.innerHTML = '需要(幫助或物資)';
+            }
+            else if(inputdate.value === 'after all'){
+                Chinese.innerHTML = '畢竟';
+            }
+            //第三課單片
+            else if(inputdate.value === 'faillure'){
+                Chinese.innerHTML = 'n. 失敗  反義:success';
+            }
+            else if(inputdate.value === 'amusing'){
+                Chinese.innerHTML = 'adj. 有趣的;好玩的';
+            }
+            else if(inputdate.value === 'amuse'){
+                Chinese.innerHTML = 'v. 逗樂;逗笑';
+            }
+            else if(inputdate.value === 'gather' || inputdate.value === 'collect'){
+                Chinese.innerHTML = 'v. 收集;聚集';
+            }
+            else if(inputdate.value === 'organization'){
+                Chinese.innerHTML = 'n. 組織;機構';
+            }
+            else if(inputdate.value === 'organize'){
+                Chinese.innerHTML = 'v. 組織;籌備';
+            }
+            else if(inputdate.value === 'research'){
+                Chinese.innerHTML = 'n. 研究;調查';
+            }
+            else if(inputdate.value === 'insist'){
+                Chinese.innerHTML = 'v. 堅持';
+            }
+            else if(inputdate.value === 'display'){
+                Chinese.innerHTML = 'n. 展覽;陳列';
+            }
+            else if(inputdate.value === 'display' || inputdate.value === 'exhibit'){
+                Chinese.innerHTML = 'v. 展示';
+            }
+            else if(inputdate.value === 'goal' || inputdate.value === 'aim'){
+                Chinese.innerHTML = 'n. 目標';
+            }
+            else if(inputdate.value === 'particularly' || inputdate.value === 'especially' || inputdate.value === 'in particular'){
+                Chinese.innerHTML = 'adv. 特別;尤其';
+            }
+            else if(inputdate.value === 'particular' || inputdate.value === 'specific'){
+                Chinese.innerHTML = 'adj. 特別的;特定的';
+            }
+            else if(inputdate.value === 'frozen'){
+                Chinese.innerHTML = 'adj. 冷凍的';
+            }
+            else if(inputdate.value === 'freeze'){
+                Chinese.innerHTML = 'v. 結冰;凝固  反義:melt';
+            }
+            else if(inputdate.value === 'mix' || inputdate.value === 'blend'){
+                Chinese.innerHTML = 'n. 混合(物)';
+            }
+            else if(inputdate.value === 'flavor' || inputdate.value === 'taste'){
+                Chinese.innerHTML = 'n. 味道';
+            }
+            else if(inputdate.value === 'period'){
+                Chinese.innerHTML = 'n. 一段時間;時期';
+            }
+            else if(inputdate.value === 'represent' || inputdate.value === 'symbolize' || inputdate.value === 'stnad for'){
+                Chinese.innerHTML = 'v. 象徵;表示';
+            }
+            else if(inputdate.value === 'willing'){
+                Chinese.innerHTML = 'adj. 願意的';
+            }
+            else if(inputdate.value === 'will'){
+                Chinese.innerHTML = 'n. 意願;意志';
+            }
+            else if(inputdate.value === 'embrace'){
+                Chinese.innerHTML = 'v. 擁抱;欣然接受';
+            }
+            else if(inputdate.value === 'path'){
+                Chinese.innerHTML = 'n. 道路;小徑';
+            }
+            else if(inputdate.value === 'have...in common'){
+                Chinese.innerHTML = '有...共通點';
+            }
+            else if(inputdate.value === 'in the first place'){
+                Chinese.innerHTML = '起初;原先';
+            }
+            else if(inputdate.value === 'get tired of' || inputdate.value === 'be tired of'){
+                Chinese.innerHTML = '厭倦';
+            }
+            else if(inputdate.value === 'due to' || inputdate.value === 'because of'){
+                Chinese.innerHTML = '由於;因為';
+            }
+            else if(inputdate.value === 'behind the times'){
+                Chinese.innerHTML = '過時;落伍';
+            }
+            else if(inputdate.value === 'go out of business'){
+                Chinese.innerHTML = '破產;停業';
+            }
+            else if(inputdate.value === 'breathe'){
+                Chinese.innerHTML = 'v. 呼吸';
+            }
+            else if(inputdate.value === 'breath'){
+                Chinese.innerHTML = 'n. 一口氣';
+            }
+            else if(inputdate.value === 'swallow'){
+                Chinese.innerHTML = 'v. 吞';
+            }
+            else if(inputdate.value === 'painful'){
+                Chinese.innerHTML = 'adj. 疼痛的;痛苦的  反義:painless';
+            }
+            else if(inputdate.value === 'pain'){
+                Chinese.innerHTML = 'n. 疼痛;痛苦';
+            }
+            else if(inputdate.value === 'annoying' || inputdate.value === 'irritating'){
+                Chinese.innerHTML = 'adj. 惱人的';
+            }
+            else if(inputdate.value === 'annoy' || inputdate.value === 'irritate'){
+                Chinese.innerHTML = 'v. 惱人;使生氣';
+            }
+            else if(inputdate.value === 'disaster'){
+                Chinese.innerHTML = 'n. 災難;災害';
+            }
+            else if(inputdate.value === 'survive'){
+                Chinese.innerHTML = 'v. 活下來;從...中生還';
+            }
+            else if(inputdate.value === 'survival'){
+                Chinese.innerHTML = 'n. 存活;生還';
+            }
+            else if(inputdate.value === 'pollute'){
+                Chinese.innerHTML = 'v. 汙染';
+            }
+            else if(inputdate.value === 'pollution'){
+                Chinese.innerHTML = 'n. 汙染';
+            }
+            else if(inputdate.value === 'environment'){
+                Chinese.innerHTML = 'n. 自然環境;環境;周遭';
+            }
+            else if(inputdate.value === 'float'){
+                Chinese.innerHTML = 'v. 漂浮  反義:sink';
+            }
+            else if(inputdate.value === 'creature'){
+                Chinese.innerHTML = 'n. 生物';
+            }
+            else if(inputdate.value === 'incident'){
+                Chinese.innerHTML = 'n. 事件';
+            }
+            else if(inputdate.value === 'reduce' || inputdate.value === 'cut' || inputdate.value === 'decrease'){
+                Chinese.innerHTML = 'v. 減少;降低  反義:increase';
+            }
+            else if(inputdate.value === 'reduction' || inputdate.value === 'decrease'){
+                Chinese.innerHTML = 'n. 減少;降低';
+            }
+            else if(inputdate.value === 'urgent' || inputdate.value === 'pressing'){
+                Chinese.innerHTML = 'adj. 急迫的;緊急的';
+            }
+            else if(inputdate.value === 'urge'){
+                Chinese.innerHTML = 'v. 催促;力勸';
+            }
+            else if(inputdate.value === 'effort'){
+                Chinese.innerHTML = 'n. 努力;盡力';
+            }
+            else if(inputdate.value === 'crisis'){
+                Chinese.innerHTML = 'n. 危機(複數crises)';
+            }
+            else if(inputdate.value === 'meanwhile' || inputdate.value === 'in the meantime'){
+                Chinese.innerHTML = 'adv. 同時';
+            }
+            else if(inputdate.value === 'ban' || inputdate.value === 'prohibit'){
+                Chinese.innerHTML = 'v. 禁止';
+            }
+            else if(inputdate.value === 'currently' || inputdate.value === 'now'){
+                Chinese.innerHTML = 'adv. 目前;現在';
+            }
+            else if(inputdate.value === 'wonder'){
+                Chinese.innerHTML = 'v. 想知道';
+            }
+            else if(inputdate.value === 'by accident' || inputdate.value === 'accidentally'){
+                Chinese.innerHTML = '意外地;偶然地  反義:on purpose';
+            }
+            else if(inputdate.value === 'throw up' || inputdate.value === 'vomit'){
+                Chinese.innerHTML = '吐;嘔吐';
+            }
+            else if(inputdate.value === 'break down'){
+                Chinese.innerHTML = '分解';
+            }
+            else if(inputdate.value === 'cut down on'){
+                Chinese.innerHTML = '減少';
+            }
+            else{
+                Chinese.innerHTML = '2~4課單片中沒有此單字';
+            }
+
+        }
+    </script>
+</body>

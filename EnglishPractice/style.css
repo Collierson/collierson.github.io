@@ -1,0 +1,57 @@
+body {
+    background: linear-gradient(to right, #e2b8f7, #d4bafa, #c7bcfb, #b9befb, #acbff9);
+    cursor: crosshair;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+    font-family: "Pacifico",cursive;
+}
+
+h1 {
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    top: 120px;
+    font-size: 90px;
+    background: -webkit-linear-gradient(0deg, #9a51ff 0%, #3a6efa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Concert One', cursive;
+    font-weight: 400;
+    z-index: -1;
+    letter-spacing: 6px;
+}
+h2 {
+    position: fixed;
+    text-align: center;
+    width: 100%;
+    top: 200px;
+    font-size: 90px;
+    background: -webkit-linear-gradient(0deg, #9a51ff 0%, #3a6efa 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: 'Concert One', cursive;
+    font-weight: 400;
+    z-index: -1;
+    letter-spacing: 6px;
+}
+button {
+    position: fixed;
+    width:50px;
+    height: 40px;
+    top:450px;
+    left: 60%;
+    right: 40%;
+    margin-left:-25px;
+    margin-top:-20px;
+}
+
+input {
+    position: fixed;
+    width:100px;
+    height: 40px;
+    top: 450px;
+    left: 50%;
+    right: 50%;
+    margin-left:-50px;
+    margin-top:-20px;
+}
