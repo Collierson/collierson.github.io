@@ -2,7 +2,7 @@ var myButton = document.querySelector('button');
 var myHeading = document.querySelector('h1');
 var Chinese = document.querySelector('h2');
 var topic = document.querySelector('h3');
-var myArray = ['v. 呼吸','n. 一口氣','v. 吞','adj. 疼痛的;痛苦的 反義:painless','n. 疼痛','adj. 惱人的','v. 惹惱;使生氣 同義:irritate;irritating','n. 災難;災害','v. 活下來;從......中生還','n. 存活;生還','v. 汙染','n. 汙染','n. 自然環境;周遭','v. 漂浮 反義:sink','n. 生物','n. 事件','v. 減少;降低 同義:decrease;cut 反義: increase','v. 減少;降低 同義:decrease 反義: increase','n. 疼痛','adj. 急迫的;緊急 同義:pressing','v. 催促;力勸','n. 努力;盡力','n. 危機','adv. 同時 同義:in the meantime','v. 禁止 同義:prohibit 反義:allow','adv. 目前;現在 同義:now','v. 想知道','意外地;偶然地 同義:accidentally 反義:on purpose','吐;嘔吐 同義:vomit','分解','減少','v. 包含;容納','n. 字詞;用語','n. 數量','v. 理解;消化 同義:take in','n. 各式各樣','adj. 各式各樣的','n. 電影','n. 劇情;情節','n. 疑問','adj. 複雜的 同義:complex','v. 使複雜 反義:simplify','n. 政策','n. 誤解','n. 理解;同情','adj. 平衡的;均衡的 反義:unbalanced','n. 平衡 反義:imbalance','n. 創作者','n. 偏好','adj. 危險的;冒險的 同義:dangerous','n. 危險;風險 同義:danger','adj. 經常的;頻繁的 反義:infruqent','n. 頻率','想到 同義:occur to sb','得知;跟上(消息)','分辨;區分 同義:distinguish;differentiate','毫無疑問地 同義:beyond doubt','相信;信任','依賴;依靠 同義:depend on','記住 同義:bear in mind','adj. 獨特的;特有的','n. (全體)工作人員;職員','v. 互動;交流','n. 互動;交流','n. 費用','n. 行程表;時刻表','n. 隧道','n. 紀念品','n. 大學 同義:college','adj. 退休的','v. 退休','v. 持續','adj. 難忘的 同義:memorable 反義:forgettable','n. 回憶;記憶力','n. 冒險','n. 世代;一代','趕快','過去曾經','睡著','保護;照顧'];
+var myArray = ['v. 呼吸','n. 一口氣','v. 吞','adj. 疼痛的;痛苦的 反義:painless','n. 疼痛','adj. 惱人的','v. 惹惱;使生氣 同義:irritate;irritating','n. 災難;災害','v. 活下來;從......中生還','n. 存活;生還','v. 汙染','n. 汙染','n. 自然環境;周遭','v. 漂浮 反義:sink','n. 生物','n. 事件','v. 減少;降低 同義:decrease;cut 反義: increase','v. 減少;降低 同義:decrease 反義: increase','n. 疼痛','adj. 急迫的;緊急 同義:pressing','v. 催促;力勸','n. 努力;盡力','n. 危機','adv. 同時 同義:in the meantime','v. 禁止 同義:prohibit 反義:allow','adv. 目前;現在 同義:now','v. 想知道','意外地;偶然地 同義:accidentally 反義:on purpose','吐;嘔吐 同義:vomit','分解','減少','v. 包含;容納','n. 字詞;用語','n. 數量','v. 理解;消化 同義:take in','n. 各式各樣','adj. 各式各樣的','n. 電影','n. 劇情;情節','n. 疑問','adj. 複雜的 同義:complex','v. 使複雜 反義:simplify','n. 政策','n. 誤解','n. 理解;同情','adj. 平衡的;均衡的 反義:unbalanced','n. 平衡 反義:imbalance','n. 創作者','n. 偏好','adj. 危險的;冒險的 同義:dangerous','n. 危險;風險 同義:danger','adj. 經常的;頻繁的 反義:infruqent','n. 頻率','想到 同義:occur to sb','得知;跟上(消息)','分辨;區分 同義:distinguish;differentiate','毫無疑問地 同義:beyond doubt','相信;信任','依賴;依靠 同義:depend on','記住 同義:bear in mind'];
 const inputdate = document.querySelector('input[type="text"]');
 
 myButton.onclick = function() {
@@ -201,67 +201,7 @@ function setChinese() {
     else if(inputdate.value === 'keep in mind'){
         Chinese.innerHTML = '記住 同義:bear in mind';
     }
-    else if(inputdate.value === 'unique'){
-        Chinese.innerHTML = 'adj. 獨特的;特有的';
-    }
-    else if(inputdate.value === 'staff'){
-        Chinese.innerHTML = 'n. (全體)工作人員;職員';
-    }
-    else if(inputdate.value === 'interact'){
-        Chinese.innerHTML = 'v. 互動;交流';
-    }
-    else if(inputdate.value === 'interaction'){
-        Chinese.innerHTML = 'n. 互動;交流';
-    }
-    else if(inputdate.value === 'fee'){
-        Chinese.innerHTML = 'n. 費用';
-    }
-    else if(inputdate.value === 'schedule'){
-        Chinese.innerHTML = 'n. 行程表;時刻表';
-    }
-    else if(inputdate.value === 'tunnel'){
-        Chinese.innerHTML = 'n. 隧道';
-    }
-    else if(inputdate.value === 'souvenir'){
-        Chinese.innerHTML = 'n. 紀念品';
-    }
-    else if(inputdate.value === 'university'){
-        Chinese.innerHTML = 'n. 大學 同義:college';
-    }
-    else if(inputdate.value === 'retired'){
-        Chinese.innerHTML = 'adj. 退休的';
-    }
-    else if(inputdate.value === 'retire'){
-        Chinese.innerHTML = 'v. 退休';
-    }
-    else if(inputdate.value === 'last'){
-        Chinese.innerHTML = 'v. 持續';
-    }
-    else if(inputdate.value === 'unforgettable'){
-        Chinese.innerHTML = 'adj. 難忘的 同義:memorable 反義:forgettable';
-    }
-    else if(inputdate.value === 'memory'){
-        Chinese.innerHTML = 'n. 回憶;記憶力';
-    }
-    else if(inputdate.value === 'adventure'){
-        Chinese.innerHTML = 'n. 冒險';
-    }
-    else if(inputdate.value === 'generation'){
-        Chinese.innerHTML = 'n. 世代;一代';
-    }
-    else if(inputdate.value === 'hurry up'){
-        Chinese.innerHTML = '趕快';
-    }
-    else if(inputdate.value === 'used to'){
-        Chinese.innerHTML = '過去曾經';
-    }
-    else if(inputdate.value === 'fall asleep'){
-        Chinese.innerHTML = '睡著';
-    }
-    else if(inputdate.value === 'watch over'){
-        Chinese.innerHTML = '保護;照顧';
-    }
     else{
-        Chinese.innerHTML = '2~4課單片中沒有此單字';
+        Chinese.innerHTML = '4~5課單片中沒有此單字';
     }
 }
