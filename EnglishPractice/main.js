@@ -75,9 +75,6 @@ function setChinese() {
     else if(inputdate.value === 'reduction'){
         Chinese.innerHTML = 'v. 減少;降低 同義:decrease 反義: increase';
     }
-    else if(inputdate.value === 'pain'){
-        Chinese.innerHTML = 'n. 疼痛';
-    }
     else if(inputdate.value === 'urgent'){
         Chinese.innerHTML = 'adj. 急迫的;緊急 同義:pressing';
     }
