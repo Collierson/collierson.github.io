@@ -162,7 +162,7 @@ function setChinese() {
     else if(inputdate.value === 'creator'){
         Chinese.innerHTML = 'n. 創作者';
     }
-    else if(inputdate.value === 'preator'){
+    else if(inputdate.value === 'preference'){
         Chinese.innerHTML = 'n. 偏好';
     }
     else if(inputdate.value === 'risky'){
