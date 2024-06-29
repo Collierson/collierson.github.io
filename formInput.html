@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>表單填寫處 - 絨</title>
+    <link rel="stylesheet" href="formInput.css" />
+    <link rel="shortcut icon" href="logo.ico"/>
+</head>
+<body>
+    <div class="information_bar">
+        <button class="homebutton">注射資料系統</button>
+    </div>
+    <form name="myForm" class="myForm" id="myForm" method="post">
+        <h1>表單填寫處</h1>
+        <select class="time" multiple size="5" name="time" id="time">
+            <option value="null">請選擇注射時段：</option>
+            <option value="Morning">早上</option>
+            <option value="Noon">中午</option>
+            <option value="Afternoon">下午</option>
+            <option value="Night">睡前</option>
+        </select>
+        <select class="count" multiple size="3" name="count" id="count">
+            <option value="null">請選擇注射劑量：</option>
+            <option value="14">14</option>
+            <option value="16">16</option>
+        </select>
+        <select class="place" multiple size="7" name="place" id="place">
+            <option value="null">請選擇注射部位：</option>
+            <option value="left_shoulder">左肩</option>
+            <option value="right_shoulder">右肩</option>
+            <option value="left_leg">左腿</option>
+            <option value="right_leg">右腿</option>
+            <option value="left_belly">左肚</option>
+            <option value="right_belly">右肚</option>
+        </select>
+        <div class="ExactTimeAndName">
+            <span>輸入注射時間、原始血糖及施打者姓名</span>
+            <input type="text" class="exactTime" id="exactTime" placeholder="hh:mm" name="exactTime"/>
+            <input type="text" class="sg" id="sg" placeholder="原始血糖" name="sg"/>
+            <input type="text" class="name" id="name" placeholder="施打者姓名" name="name"/>
+        </div>
+        <button type="submit" class="Add">添加</button>
+    </form>
+
+    <script>
+        const scriptURL = 'https://sheetdb.io/api/v1/eydj2kexw8ecb'
+        const form = document.querySelector('#myForm')
+
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            console.log(form)
+            fetch(scriptURL, { 
+                method: 'POST', 
+                body: new FormData(form)})
+                .then(response => {alert('Success!', response)})
+                .catch(error => alert('Error!', error.message))
+        })
+
+
+    </script>
+</body>
+</html>

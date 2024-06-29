@@ -1,0 +1,67 @@
+body {
+    font-family: Roboto;
+    background-color: #93a5f5;
+    margin: 0 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.homebutton{
+    font-family:Roboto;
+    position: fixed;
+    display: block;
+    left: 28px;
+    top: 15px;
+    font-size: 35px;
+    background-color: rgb(89, 89, 252);
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+}
+
+.time{
+    width: 200px;
+    font-size: 20px;
+}
+.count{
+    width: 200px;
+    font-size: 20px;
+}
+.place{
+    width: 200px;
+    font-size: 20px;
+}
+.ExactTimeAndName{
+    display: flex;
+    flex-direction:column
+}
+.ExactTimeAndName span{
+    font-size: 22px;
+    font-weight:bold;
+}
+.ExactTimeAndName input{
+    font-size: 20px;
+    width: 243px;
+    margin: auto;
+
+}
+.Add{
+    font-size: 20px;
+}
+.myForm{
+    width: 400px;
+    position: fixed;
+    top:25%;
+    color: #ffffff;
+    padding: 40px;
+    box-shadow: 10px 10px 25px #00000080;
+    text-align: center;
+    border-radius: 25px;
+}
+.information_bar{
+    background-color: rgb(89, 89, 252);
+    width: 100%;
+    padding:40px;
+}
