@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>ILoveU</title>
+  <style>
+    body {
+      background-color: #f5acac;
+      font-family: "Segoe UI", sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      text-align: center;
+    }
+    .image {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 20px;
+    }
+    .question {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+    .button {
+      font-size: 20px;
+      padding: 10px 20px;
+      margin: 10px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .agree {
+    background-color: #e57373;
+    color: white;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    }
+    .reject {
+      background-color: #64b5f6;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img id="pandaImg" class="image" src="./bato.png" alt="panda">
+    <div class="question" id="question">可以跟我和好嗎？</div>
+    <button class="button agree" id="agreeBtn">和好</button>
+    <button class="button reject" id="rejectBtn">不要</button>
+  </div>
+
+  <script>
+const rejectBtn = document.getElementById('rejectBtn');
+const agreeBtn = document.getElementById('agreeBtn');
+const pandaImg = document.getElementById('pandaImg');
+const question = document.getElementById('question');
+
+let step = 0;
+
+const steps = [
+  { img: './saw.jpg', text: '我知道錯了', size: 50 },
+  { img: './money.jpg', text: '零用錢給你嘛', size: 80 },
+  { img: './look.jpg', text: '欲擒故縱 我懂了', size: 110 },
+  { img: './saw2.jpg', text: '能不能給個台階嘛', size: 140 },
+  { img: './saw3.jpg', text: '就原諒我嘛', size: 170 },
+  { img: '', text: '', size: 200 },
+  { img: '', text: '', size: 230 },
+  { img: '', text: '', size: 260 },
+  { img: '', text: '', size: 290 },
+  { img: '', text: '', size: 320 },
+];
+
+rejectBtn.addEventListener('click', () => {
+  if (step < steps.length) {
+    const current = steps[step];
+    if (current.img) pandaImg.src = current.img;
+    if (current.text) rejectBtn.textContent = current.text;
+    agreeBtn.style.fontSize = `${current.size}px`;
+    agreeBtn.style.padding = `${current.size / 2.5}px ${current.size}px`;
+    agreeBtn.style.borderRadius = `${current.size / 2.5}px`;
+    step++;
+  }
+});
+
+agreeBtn.addEventListener('click', () => {
+  pandaImg.src = "./like.png"
+  rejectBtn.style.display = 'none';
+  agreeBtn.style.display = 'none';
+  question.textContent = "好耶，愛你"
+});
+
+  </script>
+</body>
+</html>
